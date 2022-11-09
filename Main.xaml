@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="797.6,1217.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="815.2,1473.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
@@ -114,7 +114,7 @@
       <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="2-й процес. Процес порівняння інформації&#xA;2.1. Порівняння має відбуватися з файлами, отриманими в результаті 1-го процесу.&#xA;2.2. У всіх трьох файлах знайти однакові моделі смартфонів&#xA;2.3. Порівняти вартості однакових моделей смартфонів та знайти найнижчу з усіх&#xA;2.4. Отриману інформацію зберегти в окремий файл Excel з назвою «Мінімальна вартість»&#xA;2.5. Інші записи зберегти в Excel файл з довільною назвою&#xA;2.6. Надіслати отримані Excel таблиці на пошту (можна використовувати довільний поштовий клієнт та адресу одержувача)" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="674.4,1152.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="2-й процес. Процес порівняння інформації&#xA;2.1. Порівняння має відбуватися з файлами, отриманими в результаті 1-го процесу.&#xA;2.2. У всіх трьох файлах знайти однакові моделі смартфонів&#xA;2.3. Порівняти вартості однакових моделей смартфонів та знайти найнижчу з усіх&#xA;2.4. Отриману інформацію зберегти в окремий файл Excel з назвою «Мінімальна вартість»&#xA;2.5. Інші записи зберегти в Excel файл з довільною назвою&#xA;2.6. Надіслати отримані Excel таблиці на пошту (можна використовувати довільний поштовий клієнт та адресу одержувача)" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="649.6,1408.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_excel_Comfy" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_excel_Eldorado" />
@@ -132,14 +132,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="З колонки &quot;Назва&quot; беремо номер продукту та записуємо у нову колонку &quot;Серійний номер&quot;" sap:VirtualizedContainerService.HintSize="612,92.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
+    <Sequence DisplayName="З колонки &quot;Назва&quot; беремо номер продукту та записуємо у нову колонку &quot;Серійний номер&quot;" sap:VirtualizedContainerService.HintSize="587.2,92.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="549.6,577.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="525.6,577.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
@@ -151,7 +151,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Comfy: Add column &quot;Серійний номер&quot;" sap:VirtualizedContainerService.HintSize="400,92.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
+              <Sequence DisplayName="Comfy: Add column &quot;Серійний номер&quot;" sap:VirtualizedContainerService.HintSize="832,1880.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -504,7 +504,7 @@
         </ueab:ExcelProcessScopeX.Body>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <Sequence DisplayName="Зчитуємо дані з таблиць та записуємо у змінні типу DataTable" sap:VirtualizedContainerService.HintSize="612,92.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
+    <Sequence DisplayName="Зчитуємо дані з таблиць та записуємо у змінні типу DataTable" sap:VirtualizedContainerService.HintSize="587.2,92.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -533,7 +533,7 @@
         </ui:ReadRange.DataTable>
       </ui:ReadRange>
     </Sequence>
-    <Sequence DisplayName="Створюємо змінну minimumCost" sap:VirtualizedContainerService.HintSize="612,92.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
+    <Sequence DisplayName="Створюємо змінну minimumCost" sap:VirtualizedContainerService.HintSize="587.2,92.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -588,7 +588,7 @@
         </ui:AddDataColumn.DataTable>
       </ui:AddDataColumn>
     </Sequence>
-    <Sequence DisplayName="Шукаємо мінімальну ціну та записуемо у minimumCost" sap:VirtualizedContainerService.HintSize="612,92.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
+    <Sequence DisplayName="Шукаємо мінімальну ціну та записуемо у minimumCost" sap:VirtualizedContainerService.HintSize="587.2,92.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -622,7 +622,7 @@
                       <If DisplayName="If (проверяем есть ли данный телефон между Comfy и Eldorado)" sap:VirtualizedContainerService.HintSize="865.6,3088.8" sap2010:WorkflowViewState.IdRef="If_4">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
-                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">CurrentRowComfy.ItemArray[4].Equals(CurrentRowEldorado.ItemArray[4])</CSharpValue>
+                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">CurrentRowComfy[4].Equals(CurrentRowEldorado[4])</CSharpValue>
                           </InArgument>
                         </If.Condition>
                         <sap:WorkflowViewStateService.ViewState>
@@ -653,7 +653,7 @@
                                     <If DisplayName="If (если первое условие сработало, проверяем между Comfy и Touch)" sap:VirtualizedContainerService.HintSize="625.6,2451.2" sap2010:WorkflowViewState.IdRef="If_5">
                                       <If.Condition>
                                         <InArgument x:TypeArguments="x:Boolean">
-                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">CurrentRowComfy.ItemArray[4].Equals(CurrentRowTouch.ItemArray[4])</CSharpValue>
+                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_112">CurrentRowComfy[4].Equals(CurrentRowTouch[4])</CSharpValue>
                                         </InArgument>
                                       </If.Condition>
                                       <If.Then>
@@ -717,7 +717,7 @@
                                                 <ui:AddDataRow DataRow="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="337.6,197.6" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
                                                   <ui:AddDataRow.ArrayRow>
                                                     <InArgument x:TypeArguments="s:Object[]">
-                                                      <CSharpValue x:TypeArguments="s:Object[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">CurrentRowComfy.ItemArray</CSharpValue>
+                                                      <CSharpValue x:TypeArguments="s:Object[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">CurrentRowComfy.ItemArray</CSharpValue>
                                                     </InArgument>
                                                   </ui:AddDataRow.ArrayRow>
                                                   <ui:AddDataRow.DataTable>
@@ -838,7 +838,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
     </Sequence>
-    <Sequence DisplayName="Створюємо змінну priceSamsungWithOutMinCost і записуємо туда дані" sap:VirtualizedContainerService.HintSize="612,92.8" sap2010:WorkflowViewState.IdRef="Sequence_38">
+    <Sequence DisplayName="Створюємо змінну priceSamsungWithOutMinCost і записуємо туда дані" sap:VirtualizedContainerService.HintSize="587.2,92.8" sap2010:WorkflowViewState.IdRef="Sequence_38">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="fullPriceSamsung">
           <Variable.Default>
@@ -1074,10 +1074,10 @@
         </ui:ForEachRow>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="Переносимо інформацію в Excel" sap:VirtualizedContainerService.HintSize="612,92.8" sap2010:WorkflowViewState.IdRef="Sequence_48">
+    <Sequence DisplayName="Переносимо інформацію в Excel" sap:VirtualizedContainerService.HintSize="587.2,348.8" sap2010:WorkflowViewState.IdRef="Sequence_48">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -1134,10 +1134,10 @@
             </InOutArgument>
           </ui:RemoveDataColumn.DataTable>
         </ui:RemoveDataColumn>
-        <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="337.6,90.4" sap2010:WorkflowViewState.IdRef="SortDataTable_2" Order="Ascending" SortOrder="Ascending">
+        <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="337.6,90.4" sap2010:WorkflowViewState.IdRef="SortDataTable_2" Order="Decending" SortOrder="Descending">
           <ui:SortDataTable.ColumnIndex>
             <InArgument x:TypeArguments="s:Nullable(x:Int32)">
-              <CSharpValue x:TypeArguments="s:Nullable(x:Int32)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">1</CSharpValue>
+              <CSharpValue x:TypeArguments="s:Nullable(x:Int32)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">0</CSharpValue>
             </InArgument>
           </ui:SortDataTable.ColumnIndex>
           <ui:SortDataTable.DataTable>
@@ -1160,7 +1160,7 @@
         </ui:WriteRange>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="Відправка файлів на пошту" sap:VirtualizedContainerService.HintSize="400,399.2" sap2010:WorkflowViewState.IdRef="Sequence_51">
+    <Sequence DisplayName="Відправка файлів на пошту" sap:VirtualizedContainerService.HintSize="587.2,92.8" sap2010:WorkflowViewState.IdRef="Sequence_54">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="pass" />
       </Sequence.Variables>
