@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="868.8,1200.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="784.8,1217.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="37">
+    <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -38,10 +38,15 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="61">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
@@ -102,9 +107,14 @@
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="674.4,1136" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="2-й процес. Процес порівняння інформації&#xD;&#xA;2.1. Порівняння має відбуватися з файлами, отриманими в результаті 1-го процесу.&#xD;&#xA;2.2. У всіх трьох файлах знайти однакові моделі смартфонів&#xD;&#xA;2.3. Порівняти вартості однакових моделей смартфонів та знайти найнижчу з усіх&#xD;&#xA;2.4. Отриману інформацію зберегти в окремий файл Excel з назвою «Мінімальна вартість»&#xD;&#xA;2.5. Інші записи зберегти в Excel файл з довільною назвою&#xD;&#xA;2.6. Надіслати отримані Excel таблиці на пошту (можна використовувати довільний поштовий клієнт та адресу одержувача)" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="674.4,1152.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_excel_Comfy" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_excel_Eldorado" />
@@ -119,6 +129,7 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Sequence DisplayName="З колонки &quot;Назва&quot; беремо номер продукту та записуємо у нову колонку &quot;Серійний номер&quot;" sap:VirtualizedContainerService.HintSize="612,92.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
@@ -1063,10 +1074,10 @@
         </ui:ForEachRow>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="Переносимо інформацію в Excel" sap:VirtualizedContainerService.HintSize="612,348.8" sap2010:WorkflowViewState.IdRef="Sequence_48">
+    <Sequence DisplayName="Переносимо інформацію в Excel" sap:VirtualizedContainerService.HintSize="612,92.8" sap2010:WorkflowViewState.IdRef="Sequence_48">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -1148,6 +1159,49 @@
           </ui:WriteRange.DataTable>
         </ui:WriteRange>
       </Sequence>
+    </Sequence>
+    <Sequence DisplayName="Відправка файлів на пошту" sap:VirtualizedContainerService.HintSize="612,92.8" sap2010:WorkflowViewState.IdRef="Sequence_51">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="pass" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="337.6,32" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA8p1uYQBnHU2cG1DABSiZngAAAAACAAAAAAAQZgAAAAEAACAAAAAH2GkKssdqOVZulYV1Bi4mMCGgLuEIoAZzSheOV5eZvAAAAAAOgAAAAAIAACAAAABqInvtnYy497ASOzQD24G/zM81bRF7NJBFpPUsXmT9yyAAAAAceLa5Y/GlzR+i23UV13FEX/CBe6hnhHhb9aCgNG/NlEAAAAA/Fbgo1BRPLeGiicAmzgJJ5L2fEj0/kflMzeRfP7mpLwdMg/66987RUSJrK+DLeR7BNobznpcQzLWialJ62xEy">
+        <ui:GetPassword.Result>
+          <OutArgument x:TypeArguments="x:String">
+            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_42">pass</CSharpReference>
+          </OutArgument>
+        </ui:GetPassword.Result>
+      </ui:GetPassword>
+      <ui:SendMail Bcc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Cc="vitalik_khristov@ukr.net" DisplayName="Send SMTP Mail Message" Email="vitalii.khrystov.IT@gmail.com" EnableSSL="True" From="vitalii.khrystov.IT@gmail.com" sap:VirtualizedContainerService.HintSize="337.6,204" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="Христов Віталій" Port="587" SecureConnection="StartTls" Server="mail.gmx.com" Subject="Іннора. Тестове завдання. Христов Віталій" To="vitalikcorlione@gmail.com">
+        <ui:SendMail.Body>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107" xml:space="preserve">"Доброго дня, Ігор." + Environment.NewLine +
+"У долученні ви знайдете два файли (minPrice, priceSamsungWithOutMinCost)"+ Environment.NewLine + Environment.NewLine +
+"З повагою," + Environment.NewLine +
+"Христов Віталй."</CSharpValue>
+          </InArgument>
+        </ui:SendMail.Body>
+        <ui:SendMail.Files>
+          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String">minPrice.xlsx</Literal>
+            </InArgument>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String">priceSamsungWithOutMinCost.xlsx</Literal>
+            </InArgument>
+          </scg:List>
+        </ui:SendMail.Files>
+        <ui:SendMail.Password>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">pass</CSharpValue>
+          </InArgument>
+        </ui:SendMail.Password>
+      </ui:SendMail>
     </Sequence>
   </Sequence>
 </Activity>
